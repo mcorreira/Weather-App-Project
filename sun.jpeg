@@ -1,0 +1,42 @@
+body {
+  font-family: dosis, sans-serif;
+  color: indigo;
+}
+
+h1,
+h2,
+h3 {
+  color: indigo;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  word-spacing: 15px;
+  padding: 0%;
+  margin-bottom: 40px;
+}
+
+form {
+  display: block;
+  text-align: center;
+}
+
+input {
+  height: 35px;
+  border: 1px solid indigo;
+  box-shadow: 0 0 10px #858180;
+  width: 200px;
+  border-radius: 5px;
+}
+
+button {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid indigo;
+}
+button:hover {
+  background-color: indigo;
+  color: white;
+}
