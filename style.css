@@ -40,3 +40,7 @@ button:hover {
   background-color: indigo;
   color: white;
 }
+
+p {
+  text-align: center;
+}
