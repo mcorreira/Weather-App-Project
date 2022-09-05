@@ -1,21 +1,47 @@
 body {
-  font-family: dosis, sans-serif;
+  font-family: dosis, sans-serif, arial;
   color: indigo;
+  background: #dde1e7;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
 h1,
-h2,
-h3 {
+h2 {
   color: indigo;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-size: 200%;
 }
 
 h3 {
-  word-spacing: 15px;
-  padding: 0%;
-  margin-bottom: 40px;
+  color: indigo;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
+  margin-bottom: 30px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+
+  color: indigo;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 25px;
 }
 
 form {
@@ -26,7 +52,8 @@ form {
 input {
   height: 35px;
   border: 1px solid indigo;
-  box-shadow: 0 0 10px #858180;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1),
+    0px 4px 8px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
   width: 200px;
   border-radius: 5px;
 }
