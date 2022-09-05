@@ -34,34 +34,60 @@
   </head>
   <body>
     <h1>Weather Where You Are</h1>
-    <form id="search-form">
-      <input type="text" id="enter-city" placeholder="Enter City Name:" />
-      <button id="search">Search</button>
-      <button id="search-geo">Current Location</button>
-      <div id="location"></div>
-    </form>
     <div class="container">
-      <div class="weather-app">
-      <h2 id="city"></h2>
-      <div class="row">
-        <div class="col-6">
-            <img src="https://www.flaticon.com/free-icon/sun_869869" alt="sunny" />
-      <h3 id="temperature"></h3>
-        
-    </div>
-     
-        <div class="col-6">
-      <ul>
-        <li id="date-time">Last updated:</li>
+      <div class="weather-app-wrapper">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="text"
+                id="enter-city"
+                class="form-control"
+                autocomplete="off"
+                placeholder="Enter City Name:"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary w-100"
+              />
+            </div>
 
-        <li id="description"></li>
-      </ul>
+            <button id="search-geo">Current Location</button>
+          </div>
+        </form>
+
+        <div class="weather-app">
+          <div class="overview">
+            <h2 id="city"></h2>
+            <ul>
+              <li>Last updated: <span id="date-time"></span></li>
+              <li id="description"></li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="d-flex flex-row-reverse weather-temperature">
+                <img src="" alt="Clear" id="icon" />
+                <strong id="temperature"></strong>
+                <span class="units"> °C | °F</span>
+              </div>
+            </div>
+            
+        </div>
+      </div>
+
+      <small>
+        <a
+          href="https://github.com/mhm761105/Weather-App-Project"
+          target="_blank"
+          id="open"
+          >Open-source Code </a
+        >by Megan Correira
+      </small>
     </div>
-    <small>
-      <a href="https://github.com/mhm761105/Weather-App-Project" target="_blank" id="open"
-        >Open-source Code </a
-      >by Megan Correira
-    </small>
     <script src="src/app.js"></script>
   </body>
 </html>
