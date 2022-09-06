@@ -62,31 +62,33 @@
         <div class="weather-app">
           <div class="overview">
             <h2 id="city"></h2>
-            <ul>
-              <li>Last updated: <span id="date-time"></span></li>
-              <li id="description"></li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <div class="d-flex flex-row-reverse weather-temperature">
-                <img src="" alt="Clear" id="icon" />
-                <strong id="temperature"></strong>
-                <span class="units"> °C | °F</span>
+            <div class="row">
+              <div class="col-6">
+                <ul>
+                  <li>Last updated: <span id="date-time"></span></li>
+                  <li id="description"></li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <div class="d-flex flex-row-reverse weather-temperature">
+                  <img src="" alt="Clear" id="icon" />
+                  <span class="units"> °C | °F</span>
+                  <strong id="temperature"> </strong>
+                </div>
               </div>
             </div>
-            
+          </div>
         </div>
-      </div>
 
-      <small>
-        <a
-          href="https://github.com/mhm761105/Weather-App-Project"
-          target="_blank"
-          id="open"
-          >Open-source Code </a
-        >by Megan Correira
-      </small>
+        <small>
+          <a
+            href="https://github.com/mhm761105/Weather-App-Project"
+            target="_blank"
+            id="open"
+            >Open-source Code </a
+          >by Megan Correira
+        </small>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
