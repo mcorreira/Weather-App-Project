@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Where You Are or Where You Want to Be</title>
 
+ 
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,12 +35,13 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>Weather Where You Are</h1>
-    <div class="container">
-      <div class="weather-app-wrapper">
-        <form id="search-form" class="mb-3">
-          <div class="row">
-            <div class="col-9">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron heading">Weather Where You Are</h1>
+            <div class="weather-app">
+              <form id="search-form" class="mb-3">
+                <div class="row">
+                  <div class="d-flex bd-highlight mb-3 justify-content-center">
               <input
                 type="text"
                 id="enter-city"
@@ -46,29 +49,20 @@
                 autocomplete="off"
                 placeholder="Enter City Name:"
               />
-            </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="btn btn-primary w-100"
-              />
-            </div>
+                    </div>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                       <button class="btn me-lg-2 w-60" type="submit">Search</button>
+                       <button class="btn " type="geo-search">Current Location</button>
+                      </div>
+                </div>
+               </form>
+              </div>
+          </section>
 
-            <button id="search-geo">Current Location</button>
-          </div>
-        </form>
-
-        <div class="weather-app">
+        <div class="weather-app-wrapper">
           <div class="overview">
             <h2 id="city"></h2>
             <div class="row">
-              <div class="col-6">
-                <ul>
-                  <li>Last updated: <span id="date-time"></span></li>
-                  <li id="description"></li>
-                </ul>
-              </div>
               <div class="col-6">
                 <div class="d-flex flex-row-reverse weather-temperature">
                   <img src="" alt="Clear" id="icon" />
@@ -76,20 +70,31 @@
                   <strong id="temperature"> </strong>
                 </div>
               </div>
+              </div>
+              </div>
+
+              <div class="col-6">
+              <ul>
+                 <li>Sky:<span id="description"></li>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
+              </ul>
             </div>
           </div>
-        </div>
-
+           
+          
+        
         <small>
           <a
             href="https://github.com/mhm761105/Weather-App-Project"
             target="_blank"
             id="open"
             >Open-source Code </a
-          >by Megan Correira
+          >by, Megan Correira
         </small>
       </div>
-    </div>
+    
+    
     <script src="src/app.js"></script>
   </body>
 </html>
