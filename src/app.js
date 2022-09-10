@@ -28,6 +28,9 @@ function displayCityWeather(response) {
     response.data.weather[0].main);
   let humidityElement = (document.querySelector("#humidity").innerHTML =
     response.data.main.humidity);
+  let windElement = (document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
+  ));
 }
 
 //function searchCity(city) {
