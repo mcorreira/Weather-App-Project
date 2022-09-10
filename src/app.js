@@ -1,22 +1,21 @@
-function formatDate(date) {
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-  let currentDay = days[date.getDay()];
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
   let hours = date.getHours();
   hours = ("0" + date.getHours()).slice(-2);
   let minutes = date.getMinutes();
   minutes = ("0" + date.getMinutes()).slice(-2);
-
-  let formattedDate = `${currentDay} ${hours}:${minutes}`;
-  return formattedDate;
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayCityWeather(response) {
@@ -30,6 +29,9 @@ function displayCityWeather(response) {
     response.data.main.humidity);
   let windElement = (document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
+  ));
+  let dateElement = (document.querySelector("#date").innerHTML = formatDate(
+    response.data.dt * 1000
   ));
 }
 
