@@ -24,7 +24,7 @@ function displayCityWeather(response) {
   let temperatureElement = (document.querySelector("#temperature").innerHTML =
     Math.round(response.data.main.temp));
   let descriptionElement = (document.querySelector("#description").innerHTML =
-    response.data.weather[0].main);
+    response.data.weather[0].description);
   let humidityElement = (document.querySelector("#humidity").innerHTML =
     response.data.main.humidity);
   let windElement = (document.querySelector("#wind").innerHTML = Math.round(
@@ -33,16 +33,23 @@ function displayCityWeather(response) {
   let dateElement = (document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   ));
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 //function searchCity(city) {
 let apiKey = "b7d0aaa9315b0b857b058fd4db6bdb09";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=San Francisco&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayCityWeather);
 
 //function handleSearch(event) {
 //event.preventDefault();
-//let city = document.querySelector("#enter-city").value;
+//let city = document.querySelector("#enter-city").value;Mia
 //searchCity(city);
 //}
 
