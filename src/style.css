@@ -35,6 +35,15 @@ body {
   width: 65px;
 }
 
+.weather-temperature .active {
+  color: indigo;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
 .units {
   position: relative;
   font-size: 12px;
