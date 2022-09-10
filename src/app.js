@@ -42,13 +42,23 @@ function displayCityWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-//function searchCity(city) {
-let apiKey = "b7d0aaa9315b0b857b058fd4db6bdb09";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Tokyo&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayCityWeather);
+function searchCity(city) {
+  let apiKey = "b7d0aaa9315b0b857b058fd4db6bdb09";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayCityWeather);
+}
 
-//function handleSearch(event) {
-//event.preventDefault();
+function handleSearch(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#enter-city");
+  searchCity(cityInputElement.value);
+}
+
+//searchCity("Berlin");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSearch);
+
 //let city = document.querySelector("#enter-city").value;Mia
 //searchCity(city);
 //}

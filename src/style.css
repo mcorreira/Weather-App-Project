@@ -99,7 +99,7 @@ button.submit {
   width: 500px;
 }
 
-button:hover.btn {
+input:hover.btn {
   background-color: indigo;
   color: white;
 }
