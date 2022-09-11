@@ -31,22 +31,23 @@ body {
 
 .weather-temperature img {
   margin-right: 10px;
-  height: 65px;
-  width: 65px;
+  margin-top: -25px;
+  height: 100;
+  width: 100;
 }
 
-.weather-temperature .active {
-  color: indigo;
-  cursor: default;
-}
-
-.weather-temperature .active:hover {
+.celsius.link {
   text-decoration: none;
 }
 
 .units {
   position: relative;
   font-size: 12px;
+}
+
+.units a {
+  text-decoration: none;
+  color: indigo;
 }
 
 .small {
@@ -74,6 +75,7 @@ h6 {
 ul {
   margin: 0;
   padding: 0;
+  text-align: right;
 }
 
 li {
@@ -81,11 +83,11 @@ li {
   font-size: 22px;
   font-weight: 100;
   line-height: 25px;
+  padding-bottom: 5px;
   text-transform: capitalize;
 }
 
-.description::first-letter {
-  text-transform: capitalize;
+.sky {
 }
 
 form {
@@ -93,22 +95,18 @@ form {
   margin: auto;
 }
 
-.btn {
+button {
   height: 50px;
   border: 1px solid indigo;
   border-radius: 5px;
-  width: auto;
+  max-width: 20;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1),
     0px 4px 8px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-button.submit {
-  width: 500px;
-}
-
-input:hover.btn {
+button:hover {
   background-color: indigo;
   color: white;
 }

@@ -51,8 +51,8 @@
               />
                     </div>
                       <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                       <input class="btn" type="submit" value="Search"/>
-                       <input class="btn " type="geo-search" value="Current Location"/>
+                       <button class="btn" type="submit" value="Search">Search</button>
+                       <button class="btn" type="button" value="Current Location">Current Location</button>
                       </div>
                 </div>
                </form>
@@ -72,9 +72,10 @@
                 </div>
                 <div class="col-6">
               <ul>
-                <li>Sky: <span id="description"></span></li>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> Km/h</li>
+                <li id="sky"><strong>Sky: </strong><span id="description"></span></li>
+                <li id="humid"><strong>Humidty: </strong> <span id="humidity"></span>%</li>
+                <li id="bp"><strong>Pressure: </strong><span id="pressure"> </span> kPa </li>
+                <li id="ws"><strong>Wind: </strong><span id="wind"></span> km/h</li>
               </ul>
             </div>
               </div>

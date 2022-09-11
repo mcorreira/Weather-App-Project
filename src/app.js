@@ -25,11 +25,12 @@ function displayCityWeather(response) {
     Math.round(response.data.main.temp));
   let descriptionElement = (document.querySelector("#description").innerHTML =
     response.data.weather[0].description);
+  let pressureElement = (document.querySelector("#pressure").innerHTML =
+    Math.round(response.data.main.pressure) / 1000);
   let humidityElement = (document.querySelector("#humidity").innerHTML =
     response.data.main.humidity);
-  let windElement = (document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  ));
+  let windElement = (document.querySelector("#wind").innerHTML =
+    Math.round(response.data.wind.speed) * 3.6);
   let dateElement = (document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   ));
@@ -74,6 +75,23 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+//function getCurrentLocation(event) {
+// event.preventDefault();
+// navigator.geolocation.getCurrentLocation(showLocation);
+//}
+
+//function showLocation(position) {
+// let lat = position.coords.latitude;
+// let lon = position.coords.longitude;
+// let units = "metric";
+//let apiKey = "b7d0aaa9315b0b857b058fd4db6bdb09";
+// let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+// axios.get(apiUrl).then(displayCityWeather);
+//}
+
+//let button = document.querySelector("#button");
+//button.addEventListener("submit", getCurrentLocation);
+
 let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
@@ -86,28 +104,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Berlin");
-
-//let city = document.querySelector("#enter-city").value;Mia
-//searchCity(city);
-//}
-
-//function searchLocation(position) {
-//let lat = position.coords.latitude;
-//let lon = position.coords.longitude;
-//let units = "metric";
-//let apiKey = "210b7ede94aa064d56bd1cc04916b421";
-//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
-//axios.get(apiUrl).then(displayCityWeather);
-//}
-
-//function getCurrentLocation(event) {
-//event.preventDefault();
-//navigator.geolocation.getCurrentPosition(searchLocation);
-//}
-
-//let currentLocationButton = document.querySelector("#search-geo");
-//currentLocationButton.addEventListener("click", getCurrentLocation);
-
-//let dateElement = document.querySelector("#date-time");
-//let currentTime = new Date();
-//dateElement.innerHTML = formatDate(currentTime);
