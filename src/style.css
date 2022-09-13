@@ -121,3 +121,16 @@ input {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+
+.weather-forecast {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  color: #000;
+}
+
+.weather-forecast-temperature {
+}
