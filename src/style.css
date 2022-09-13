@@ -3,12 +3,10 @@ body {
   color: indigo;
   background: #dde1e7;
 }
-
 .weather-app {
   max-width: 600px;
   margin: auto;
 }
-
 .weather-app-wrapper {
   padding: 20px;
   border-radius: 10px;
@@ -17,67 +15,55 @@ body {
     inset 10px 10px 15px rgba(70, 70, 70, 0.12);
   margin: auto;
 }
-
 .weather-temperature span {
   font-size: 22px;
   font-weight: 100;
   line-height: 25px;
 }
-
 .weather-temperature strong {
   font-size: 48px;
   line-height: 1;
 }
-
 .weather-temperature img {
   margin-right: 10px;
   margin-top: -25px;
   height: 100;
   width: 100;
 }
-
 .celsius.link {
   text-decoration: none;
 }
-
 .units {
   position: relative;
   font-size: 12px;
 }
-
 .units a {
   text-decoration: none;
   color: indigo;
 }
-
 .small {
   max-width: 600px;
   margin: auto;
   padding: 20px;
 }
-
 h1 {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 h2 {
   text-align: center;
   font-size: 42px;
 }
-
 h6 {
   text-align: center;
   padding-bottom: 20px;
 }
-
 ul {
   margin: 0;
   padding: 0;
   text-align: right;
 }
-
 li {
   list-style: none;
   font-size: 22px;
@@ -87,14 +73,10 @@ li {
   text-transform: capitalize;
 }
 
-.sky {
-}
-
 form {
   display: inline-block;
   margin: auto;
 }
-
 button {
   height: 50px;
   border: 1px solid indigo;
@@ -105,12 +87,10 @@ button {
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1),
     0px 4px 8px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
-
 .btn:hover {
   background-color: indigo;
   color: white;
 }
-
 input {
   height: 50px;
   border: 1px solid indigo;
@@ -130,7 +110,4 @@ input {
 .weather-forecast-date {
   font-size: 16px;
   color: #000;
-}
-
-.weather-forecast-temperature {
 }
