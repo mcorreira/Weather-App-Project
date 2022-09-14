@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Where You Are or Where You Want to Be</title>
-
  
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,12 +27,8 @@
       src="https://kit.fontawesome.com/9c29335f92.js"
       crossorigin="anonymous"
     ></script>
-
-
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/style.css" />
-
-   
+    <link rel="stylesheet" href="src/style.css"/>
   </head>
   <body>
  <div>
@@ -61,7 +55,6 @@
                </form>
               </div>
           </section>
-
         <div class="weather-app-wrapper">
           <div class="overview">
             <h2 id="city"></h2>
@@ -87,45 +80,8 @@
             </div>
           </div>
 
-          <div class="weather-forecast">
-            <div class="row">
-              <div class="col-2">
-                Monday
-               <img src="http://openweathermap.org/img/wn/10d@2x.png" width="25"/>
-               10  12
-              </div>
-
-              <div class="col-2">
-                Tuesday
-               <img src="http://openweathermap.org/img/wn/10d@2x.png" width="25"/>
-               10  12
-              </div>
-
-              <div class="col-2">
-               Wednesday
-               <img src="http://openweathermap.org/img/wn/10d@2x.png" width="25"/>
-               10  12
-              </div>
-              
-              <div class="col-2">
-                Thursday
-               <img src="http://openweathermap.org/img/wn/10d@2x.png" width="25"/>
-               10  12
-              </div>
-                
-              <div class="col-2">
-                Friday
-               <img src="http://openweathermap.org/img/wn/10d@2x.png" width="25"/>
-               10  12
-              </div>
-              
-            </div>
-
-
-
-
-
-
+          <div class="weather-forecast" id="forecast">
+    
           </div>
 
 
@@ -139,6 +95,8 @@
 
         </div>
       </div>
+
+
     </div>   
     <script src="src/app.js"></script>
   </body>
