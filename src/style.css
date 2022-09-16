@@ -105,9 +105,18 @@ input {
 .weather-forecast {
   margin-top: 50px;
   text-align: center;
+  color: #000;
 }
 
 .weather-forecast-date {
   font-size: 16px;
   color: #000;
+}
+
+.weather-forecast-temp-min {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.weather-forecast-temp-max {
 }
